@@ -11,7 +11,7 @@ export class MyButtonComponent implements OnInit {
   name:String; //added a property
   isliked:boolean; //boolean property
   liked:String;
-
+  className:String;
   myService:MyServiceService;
   constructor() {
     this.name='My Button Class';
@@ -24,8 +24,13 @@ likeClicked()
  {
   this.isliked = this.myService.likeImage(this.isliked);
   this.liked = (this.isliked ? "True":"False");
+  this.className =(this.isliked ? "is-liked":"");
   } 
 
+  getClassName():String{
+
+    return this.className;
+  }
   ngOnInit() {
   }
 

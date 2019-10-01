@@ -1,6 +1,6 @@
 
 <div>
-        <button (click)="likeClicked();">Like</button>
+        <button (click)="likeClicked();" [ngClass]="getClassName()">Like</button>
 </div>
 <div>
         <span id="">"Image is Liked == {{liked}}" </span>
