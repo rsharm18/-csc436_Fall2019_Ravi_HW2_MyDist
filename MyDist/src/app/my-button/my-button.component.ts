@@ -18,19 +18,21 @@ export class MyButtonComponent implements OnInit {
        this.isliked=false;
        this.liked="False";
        this.myService = new MyServiceService();
+       this.className =(this.isliked ? "btn is-liked":"btn btn-default");
     }
 
 likeClicked()
  {
   this.isliked = this.myService.likeImage(this.isliked);
   this.liked = (this.isliked ? "True":"False");
-  this.className =(this.isliked ? "is-liked":"");
+  this.className =(this.isliked ? "btn is-liked":"btn btn-default");
   } 
 
   getClassName():String{
 
     return this.className;
   }
+
   ngOnInit() {
   }
 

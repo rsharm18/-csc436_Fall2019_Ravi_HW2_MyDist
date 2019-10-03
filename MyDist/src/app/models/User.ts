@@ -1,4 +1,4 @@
-export class Message{
+export class User{
     private name:String;
     private userID:String;
    

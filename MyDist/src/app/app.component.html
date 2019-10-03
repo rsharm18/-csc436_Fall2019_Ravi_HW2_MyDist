@@ -1,6 +1,19 @@
+
+<div class="container-fluid">
 <h1> {{title}}
 
+    <div class='container-fluid'>
 <app-my-image></app-my-image>
 <app-my-button></app-my-button>
-
+<br><br>
+</div>
+ <div class="container-fluid" *ngFor="let msg of msgData" >
+        <div class="col-md-4 text-left">
+                {{msg.user.name}} - ({{msg.user.userID}}) : </div>       
+        <div class="col-md-8 text-left">
+             <span class="text-primary">{{msg.text}}</span> &nbsp;&nbsp;&nbsp;
+            <span class="text-right text-muted"><small>{{msg.timestamp}}</small></span>
+         </div>
+</div>
 </h1>
+</div>

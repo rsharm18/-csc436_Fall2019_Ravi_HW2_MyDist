@@ -1,7 +1,10 @@
-export class Message{
-    private msg:Array<Message>;
+import { Message } from './Message';
 
-    constructor(messages:Array<Message>)
+
+export class Messages{
+    private msg:Message[];
+
+    constructor(messages:Message[])
     {
         this.msg = messages;
     }
